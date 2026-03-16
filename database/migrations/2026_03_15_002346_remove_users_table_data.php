@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
                 $table->dropColumn('phone');
-                $table->dropColumn('birthdate');
+                // $table->dropColumn('birthdate');
         });
     }
 
