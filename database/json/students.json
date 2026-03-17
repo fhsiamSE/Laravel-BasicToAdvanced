@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Siam",
+        "age": 25,
+        "email": "siam@example.com",
+        "address": "Dhaka",
+        "gender": "male",
+        "phone": "1234567890"
+    },
+    {
+        "name": "Shamim",
+        "age": 30,
+        "email": "shamim@example.com",
+        "address": "Dhaka",
+        "gender": "male",
+        "phone": "123456774"
+    },
+    {
+        "name": "Sadia",
+        "age": 22,
+        "email": "sadia@example.com",
+        "address": "Dhaka",
+        "gender": "female",
+        "phone": "1234567890"
+    }
+]
