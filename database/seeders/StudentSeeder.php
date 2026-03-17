@@ -5,8 +5,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Student;
-use Illuminate\Support\Facades\File;
-
+use Illuminate\Support\Facades\File; // to use file facade for reading json file data
+//to create seeder for students table using model factory
+// php artisan make:seeder StudentSeeder
 class StudentSeeder extends Seeder
 {
     /**
