@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Teacher extends Model
 {
-    use HasFactory;
+    use HasFactory; // to use factory for seeding data into database
 }

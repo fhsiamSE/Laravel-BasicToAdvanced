@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\teacher;
+use App\Models\student;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,5 +24,6 @@ class DatabaseSeeder extends Seeder
 
         //to insert factory data into users table using db
         teacher::factory()->count(5)->create(); 
+        student::factory()->count(10)->create();
     }
 }
