@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController; // Importing the UserController to use it in routes
 use App\Http\Controllers\TestWebSiteController; // Importing the invok TestWebSiteController to use it in routes
 use App\Http\Controllers\StudentController; // Importing the StudentController to use it in routes
-
+use App\Http\Controllers\TeacherController; // Importing the TeacherController to use it in routes
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -37,10 +37,14 @@ use App\Http\Controllers\StudentController; // Importing the StudentController t
 // // Using the invokable controller to handle the /test route
 // Route::get('/test', TestWebSiteController::class);
 
+//Student routes using controller methods
  Route::get('/students', [StudentController::class, 'showStudentInfo'])->name('students.info'); // Route to show student information using the student controller
  Route::get('/student/{id}', [StudentController::class, 'showStudentDetails'])->name('student.details'); // Route to show student details using the student controller
  Route::get('/delete/{id}', [StudentController::class, 'deleteStudent'])->name('student.delete'); // Route to delete a student using the student controller
  Route::post('/add_student', [StudentController::class, 'addStudent'])->name('addStudent'); // Route to add a new student using the student controller
- Route::post('/update/{id}', [StudentController::class, 'updateStudentinfo'])->name('updateStudentinfo'); // Route to update student information using the student controller
+ Route::put('/update/{id}', [StudentController::class, 'updateStudentinfo'])->name('updateStudentinfo'); // Route to update student information using the student controller
  Route::get('/update_student/{id}', [StudentController::class, 'showUpdateForm'])->name('updateStudent'); // Route to update student information using the student controller
  Route::view('add_newstudent', '/addStudent');// Route to show the form for adding a new student using a view
+
+ //Teacher routes using resource controller
+ Route::resource('teachers', TeacherController::class); // Resource route to handle all CRUD operations for teachers using the TeacherController

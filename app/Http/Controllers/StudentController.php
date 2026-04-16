@@ -9,7 +9,9 @@ class StudentController extends Controller
 {
     public function showStudentInfo()
     {
-        $students = DB::table('students')->get(); // Fetching all records from the 'students' table
+        $students = DB::table('students')
+        ->orderBy('name', 'asc')
+        ->paginate(5); // Fetching all records from the 'students' table
         return view('studentInfo', ['students' => $students]); // Passing the data to the 'student_info' view
     }
     public function showStudentDetails($id)

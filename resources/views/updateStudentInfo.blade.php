@@ -2,6 +2,7 @@
 <h1>Update Student Information of {{ $student->name }}</h1>
 <form action="{{ route('updateStudentinfo', ['id' => $student->student_id]) }}" method="POST">
   @csrf
+    @method('PUT')
   <div class="container mt-4 "style="width: 800px;">
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>

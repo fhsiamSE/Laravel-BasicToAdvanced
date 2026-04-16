@@ -3,7 +3,7 @@
 <h1>Student Information</h1>
 
 <a href="/add_newstudent" class="btn btn-success mb-3">Add New Student</a>
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-bordered table-striped table-responsive w-75 mt-4 mx-auto mb-5 align-middle text-center">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -17,7 +17,7 @@
     <td>{{ $student->student_id }}</td>
     <td>{{ $student->name }}</td>
 
-    <td>
+    <td class="d-flex mx-auto gap-4 justify-content-center">
     <a href="{{ route('student.details', $student->student_id) }}" class="btn btn-primary">Details</a>
     <a href="/update_student/{{ $student->student_id }}" class="btn btn-warning">Update</a>
     <a href="{{ route('student.delete', $student->student_id) }}" class="btn btn-danger">Delete</a>
@@ -26,3 +26,6 @@
   </tbody>
   @endforeach
 </table>
+<div class="mt-4 w-75 mx-auto justify-content-center">
+  {{ $students->links() }}
+</div>
