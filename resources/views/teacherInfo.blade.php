@@ -17,9 +17,13 @@
     <td>{{ $teacher->full_name }}</td>
 
     <td class="d-flex mx-auto gap-4 justify-content-center">
-    <a href="" class="btn btn-primary">Details</a>
-    <a href="" class="btn btn-warning">Update</a>
-    <a href="" class="btn btn-danger">Delete</a>
+    <a href="{{ route('teachers.show', $teacher->id) }}" class="btn btn-primary">Details</a>
+    <a href="{{ route('teachers.edit', $teacher->id) }}" class="btn btn-warning">Update</a>
+    <form action="{{ route('teachers.destroy', $teacher->id) }}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
     </td>
   </tr>
   </tbody>
